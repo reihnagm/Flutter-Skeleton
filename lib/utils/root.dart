@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 
 import './api_helper.dart';
 import '../views/widgets/home_widget.dart';
-import '../views/onboarding.dart';
+import '../views/widgets/onboarding_widget.dart';
 
 class RootWidget extends StatefulWidget {
   @override
@@ -20,20 +20,20 @@ class _RootWidgetState extends State<RootWidget> {
       if (_goingHome) {
         return HomeWidget();
       } else {
-        return Onboarding();
+        return OnboardingWidget();
       }
     }
-    final CHttp _cn = Provider.of<CHttp>(context, listen: false);
-    _cn.auth.isLoggedIn().then((val) {
+    final CHttp _chttp = Provider.of<CHttp>(context, listen: false);
+    _chttp.auth.isLoggedIn().then((val) {
       if (val) {
         setState(() {
-          _isHomeLoading = false;
           _goingHome = val;
+          _isHomeLoading = false;
         });
       } else {
-        _cn.auth.isOnboardVisited().then((val) => setState(() {
-          _isHomeLoading = false;
+        _chttp.auth.isOnboardVisited().then((val) => setState(() {
           _goingHome = val;
+          _isHomeLoading = false;
         }));
       }
     });

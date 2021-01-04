@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../models/user.dart';
+import '../models/user_model.dart';
 import '../constants/constant.dart';
 
 abstract class BaseAuth {
@@ -203,7 +203,6 @@ class Auth implements BaseAuth {
     prefs.remove("fullName");
     prefs.remove("shortBio");
     prefs.remove("username");
-    // prefs.remove("userStatus");
     prefs.remove("createdAt");
     prefs.remove("updatedAt");
     prefs.remove("status");

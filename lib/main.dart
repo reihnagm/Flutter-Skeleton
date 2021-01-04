@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
-import './views/splashscreen.dart';
+import './views/splashscreen/splashscreen.dart';
 import './provider.dart';
 import './constants/constant.dart';
 import './utils/routes.dart';

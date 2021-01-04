@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../../constants/color_palette.dart';
 import '../../constants/fab_bottom_app_bar.dart';
-import '../page_menu1.dart';
-import '../page_menu2.dart';
-import '../page_menu3.dart';
-import '../page_menu4.dart';
+import '../screens/page_menu1.dart';
+import '../screens/page_menu2.dart';
+import '../screens/page_menu3.dart';
+import '../screens/page_menu4.dart';
 
 class HomeWidget extends StatefulWidget {
   HomeWidget({Key key, this.title}) : super(key: key);
@@ -48,10 +48,10 @@ class HomeWidgetState extends State<HomeWidget> {
         notchedShape: CircularNotchedRectangle(),
         onTabSelected: onTabTapped,
         items: [
-          FABBottomAppBarItem(iconData: Icons.home, text: 'Home'),
-          FABBottomAppBarItem(iconData: Icons.event, text: 'Event'),
-          FABBottomAppBarItem(iconData: Icons.textsms, text: 'Inbox'),
-          FABBottomAppBarItem(iconData: Icons.person, text: 'Profile'),
+          FABBottomAppBarItem(iconData: Icons.home, text: 'Nav 1'),
+          FABBottomAppBarItem(iconData: Icons.event, text: 'Nav 2'),
+          FABBottomAppBarItem(iconData: Icons.textsms, text: 'Nav 3'),
+          FABBottomAppBarItem(iconData: Icons.person, text: 'Nav 4'),
         ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
